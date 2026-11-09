@@ -27,6 +27,6 @@ docker compose exec -T website nginx -s reload
 
 ## 迁移与回退
 
-首页与图片来自原 GitHub Pages 仓库，迁移前与 `185.199.109.153` 上保留 Host/SNI 的 HTTPS 响应逐字节比对一致。保留原页面和链接，包括尚未迁移的音乐站链接。
+首页与图片来自原 GitHub Pages 仓库，迁移前与 `185.199.109.153` 上保留 Host/SNI 的 HTTPS 响应逐字节比对一致。首页保留博客入口；音乐站改为删除线文字“罗德尼音乐网”，标注“（已倒闭）”并移除链接。
 
 DNSPod 根记录 ID `2446530423`。需要回退时，确认 GitHub Pages 仍可用后，将该根记录改回原 A 记录 `185.199.109.153`。原 GitHub Pages 配置及 `CNAME` 文件保留。
